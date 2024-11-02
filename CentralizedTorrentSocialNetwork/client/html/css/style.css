@@ -1,0 +1,46 @@
+@import url("root.css");
+@import url("div.css");
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background: var(--bg);
+
+  color: var(--txt);
+  font-family: var(--ff);
+}
+
+.primary-text {
+  color: var(--p);
+}
+
+.logo {
+  user-select: none;
+  cursor: pointer;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  zoom: 1.1;
+
+  transition: all var(--tt) ease-in-out;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.logo-ico {
+  width: 50px;
+  height: 50px;
+}
+
+.empty {
+  background: transparent;
+  border: transparent;
+}
+
+#debug {
+  margin-left: 0.5%;
+}
