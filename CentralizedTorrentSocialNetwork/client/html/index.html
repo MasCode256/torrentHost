@@ -19,6 +19,20 @@
     <div id="debug">
       <p id="is_client_online">Client local backend: waiting...</p>
     </div>
-    <h1>Hello</h1>
+    <div class="content">
+      <div class="left">
+        <h4 class="btn left-btn" id="page:home" onclick="switch_page('home')">
+          Home
+        </h4>
+        <h4
+          class="btn active left-btn"
+          id="page:console"
+          onclick="switch_page('console')"
+        >
+          Console
+        </h4>
+      </div>
+      <iframe id="page" src="pages/home.html" frameborder="0"></iframe>
+    </div>
   </body>
 </html>

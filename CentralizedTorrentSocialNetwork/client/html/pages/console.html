@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../js/functions.js"></script>
+  </head>
+  <body>
+    <p id="cd">Ожидание локального сервера...</p>
+  </body>
+</html>
+<script defer async>
+  document.addEventListener("DOMContentLoaded", async () => {
+    try {
+      const text = await fetchTextFromUrl("/q?cmd=cd");
+      document.getElementById("cd").innerHTML = text + ">";
+    } catch (error) {
+      console.error("Ошибка при получении текущей директории:", error);
+      document.getElementById("cd").innerHTML =
+        "Ошибка при получении текущей директории:" + error;
+    }
+  });
+</script>

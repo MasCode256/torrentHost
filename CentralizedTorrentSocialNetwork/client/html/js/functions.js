@@ -11,3 +11,15 @@ async function fetchTextFromUrl(url) {
     throw error; // Проброс ошибки, чтобы она могла быть обработана вызывающим кодом
   }
 }
+
+async function switch_page(page) {
+  const elements = document.querySelectorAll(".left-btn");
+
+  // Преобразуем NodeList в массив и используем forEach для перебора элементов
+  elements.forEach(function (element) {
+    element.classList.remove("active");
+  });
+
+  document.getElementById("page:" + page).classList.add("active");
+  document.getElementById("page").src = "pages/" + page + ".html";
+}

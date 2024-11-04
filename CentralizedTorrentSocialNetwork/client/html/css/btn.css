@@ -1,0 +1,29 @@
+.btn {
+  user-select: none;
+  cursor: pointer;
+
+  transition: all var(--tt) ease-in-out;
+
+  background: transparent;
+
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+
+  border-radius: 7px;
+
+  &:hover {
+    color: var(--p);
+  }
+
+  &.active {
+    color: var(--p);
+    transform: scale(1.04);
+
+    &:hover {
+      background: transparent;
+      color: var(--txt);
+    }
+  }
+}

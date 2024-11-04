@@ -12,3 +12,20 @@
   padding-top: 2vh;
   padding-bottom: 1vh;
 }
+
+.left {
+  margin-left: 1%;
+  margin-right: 1%;
+
+  width: 8%;
+  height: 77vh;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.content {
+  white-space: nowrap;
+  display: flex;
+}
